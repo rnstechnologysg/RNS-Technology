@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://rnstechnologysg.com/about.html">
+    <title>About Us | RNS Technology – Manpower Supply Company in Singapore</title>
+    <meta name="description"
+        content="Learn about RNS Technology, Singapore's trusted manpower supply partner for construction, rail engineering, and facility services industries.">
+    <meta name="keywords"
+        content="about RNS Technology, manpower supply singapore, workforce solutions, MOM Compliance">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === About Page Specific Styles (Matching Home Page Aesthetic) === */
+
+        /* Clean White Hero */
+        .about-hero-clean {
+            background-color: var(--white);
+            padding-top: 140px;
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about-hero-clean h1 {
+            color: #111;
+            font-weight: 700;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .about-hero-clean p {
+            color: #888;
+            font-size: 1rem;
+            max-width: 750px;
+            margin: 0 auto 25px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .about-hero-clean .breadcrumb-clean {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .about-hero-clean .breadcrumb-clean a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .about-hero-clean .breadcrumb-clean a:hover {
+            color: var(--primary-color);
+        }
+
+        .about-hero-clean .breadcrumb-clean span {
+            color: #ccc;
+        }
+
+        /* Who We Are - Story Section */
+        .about-story-section {
+            background: var(--white);
+            padding: 80px 0;
+        }
+
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-story-text .story-subtitle {
+            display: block;
+            color: var(--secondary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            font-size: 0.82rem;
+        }
+
+        .about-story-text h2 {
+            color: #111;
+            font-weight: 700;
+            font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-story-text p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 18px;
+        }
+
+        .about-compliance-badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #f0fdf4;
+            padding: 18px 22px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            margin-top: 25px;
+        }
+
+        .about-compliance-badge i {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        .about-compliance-badge div strong {
+            display: block;
+            color: #111;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .about-compliance-badge div span {
+            color: #888;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* Stats Cards */
+        .about-stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .about-stat-card {
+            background: #f9fafb;
+            border: 1px solid #f0f0f0;
+            border-radius: 16px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .about-stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            border-color: #e0e0e0;
+        }
+
+        .about-stat-card h3 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 2px;
+            display: inline;
+            font-weight: 700;
+        }
+
+        .about-stat-card .stat-suffix {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .about-stat-card p {
+            margin: 8px 0 0;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.88rem;
+        }
+
+        /* Logistics Cards */
+        .logistics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .logistics-card {
+            background: #f9fafb;
+            border: 1px solid #f0f0f0;
+            padding: 35px 30px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logistics-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: width 0.4s ease;
+        }
+
+        .logistics-card:hover::before {
+            width: 100%;
+        }
+
+        .logistics-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            border-color: #e0e0e0;
+        }
+
+        .logistics-card .log-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 18px rgba(46, 191, 102, 0.25);
+        }
+
+        .logistics-card h3 {
+            font-size: 1.25rem;
+            color: #111;
+            margin-bottom: 12px;
+        }
+
+        .logistics-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* CTA Banner */
+        .about-cta-banner {
+            margin-top: 80px;
+            background: #f4fdf8;
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid #d0f0e0;
+            text-align: center;
+        }
+
+        .about-cta-banner h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .about-cta-banner p {
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .about-story-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .logistics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-hero-clean {
+                padding-top: 110px;
+                padding-bottom: 50px;
+            }
+
+            .about-cta-banner {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Matching Home Page) -->
+    <header class="header light-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="assets/images/RNS_Logo.svg" alt="RNS Technology" style="width: 155px; height: 25px;">
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="services-rail.html">Rail & WSH</a></li>
+                    <li><a href="index.html#contact" class="btn-nav">Get Quote</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Clean White Hero (Matching Home Page Style) -->
+    <section class="about-hero-clean">
+        <div class="container fade-up" style="max-width: 900px;">
+            <div class="breadcrumb-clean" style="margin-bottom: 20px;">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>About Us</span>
+            </div>
+            <h1>Driving Efficiency Through People</h1>
+            <p>Singapore's trusted partner for high-quality, reliable, and MOM-compliant manpower solutions across construction, rail engineering, and facility services.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                <a href="index.html#contact" style="color: var(--secondary-color); font-weight: 600; text-decoration: none; font-size: 1rem;">Contact us</a>
+                <a href="partner.html" class="btn btn-primary" style="background: var(--secondary-color); color: white; font-weight: 600; padding: 10px 25px; border-radius: 8px; border: none; box-shadow: 0 4px 15px rgba(46, 191, 102, 0.3);">Wanna Employee?</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="about-story-section">
+        <div class="container">
+            <div class="about-story-grid">
+                <div class="about-story-text fade-up">
+                    <span class="story-subtitle">Who We Are</span>
+                    <h2>Building Singapore's Workforce with Confidence</h2>
+                    <p>At RNS Technology, we believe that the right people drive business success. Established in
+                        Singapore, we specialize in providing high-quality, reliable, and Compliance-focused manpower solutions
+                        across various industries including Construction, Rail Engineering, and Facility Services.</p>
+                    <p>We go beyond general recruitment. RNS Technologies is a specialized partner for Singapore's Construction and Rail Engineering sectors (Rolling Stock, Signaling, P-Way). We handle the complete operational burden—managing MOM Work Passes, Levies, Payroll, and Dormitory logistics—so you can focus on project execution.</p>
+                    <p>We adhere strictly to Ministry of Manpower (MOM) regulations, ensuring peace of mind for our
+                        clients and fair treatment for our staff. Our rigorous screening process ensures that only the
+                        most qualified candidates are deployed to your site. All deployed staff are vetted for BCA CoreTrade, CSOC, and BCSS safety compliance.</p>
+
+                    <div class="about-compliance-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div>
+                            <strong>100% MOM Compliance</strong>
+                            <span>Licensed & Certified Agency · Reg No.: 202331395D</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="fade-up" style="display: flex; flex-direction: column; gap: 20px;">
+                    <!-- Why Choose RNS - Key Differentiators -->
+                    <div style="background: #f0fdf4; border-radius: 16px; padding: 30px; border: 1px solid #d0f0e0;">
+                        <h3 style="color: var(--primary-dark); font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-check-double" style="color: var(--secondary-color); margin-right: 8px;"></i>Why Choose RNS Technologies</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #444; line-height: 1.5;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--secondary-color); margin-top: 3px; flex-shrink: 0;"></i>
+                                <span><strong>Specialized Sector Focus</strong> — Construction & Rail Engineering (Rolling Stock, Signaling, P-Way)</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #444; line-height: 1.5;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--secondary-color); margin-top: 3px; flex-shrink: 0;"></i>
+                                <span><strong>End-to-End Compliance</strong> — MOM Work Passes, Levies, Payroll & Dormitory logistics</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #444; line-height: 1.5;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--secondary-color); margin-top: 3px; flex-shrink: 0;"></i>
+                                <span><strong>Safety Certified Staff</strong> — BCA CoreTrade, CSOC & BCSS compliant workers</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #444; line-height: 1.5;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--secondary-color); margin-top: 3px; flex-shrink: 0;"></i>
+                                <span><strong>Local & Foreign Recruitment</strong> — Singaporeans, PRs, NTS & PRC sourcing with Work Permit / S-Pass processing</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #444; line-height: 1.5;">
+                                <i class="fa-solid fa-circle-check" style="color: var(--secondary-color); margin-top: 3px; flex-shrink: 0;"></i>
+                                <span><strong>Rapid Deployment</strong> — Average 48-hour mobilization for general manpower</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sectors We Specialize In -->
+    <section class="section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">OUR EXPERTISE</span>
+                <h2>Sectors We Specialize In</h2>
+                <p>Specialized manpower supply for Singapore's core sectors.</p>
+            </div>
+
+            <div class="logistics-grid">
+                <!-- Sector 1 -->
+                <div class="logistics-card fade-up">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3>Construction Manpower Supply</h3>
+                    <p>We deploy reliable, MOM-Compliance general workers for Singapore construction sites and infrastructure projects. We handle full work pass compliance for approved source countries including General Construction Workers (PRC/India/Bangladesh), Lifting Supervisors & Signalmen, and Site Erection Teams.</p>
+                </div>
+                <!-- Sector 2 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-train"></i>
+                    </div>
+                    <h3>Rail Engineering & Signalling</h3>
+                    <p>Rail engineering focuses on design, construction, maintenance, and operation of railway systems. We supply Track workers, Engineering support roles, Signaling and control systems staff, and Electrical & power supply systems personnel for safe and efficient transportation.</p>
+                </div>
+                <!-- Sector 3 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3>Manpower Compliance (MOM)</h3>
+                    <p>Full handling of Work Permits, S-Pass, Levy Management, and Payroll — ensuring every deployment is fully compliant with Singapore's Ministry of Manpower regulations. From onboarding to repatriation, we handle every compliance checkpoint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">OUR PHILOSOPHY</span>
+                <h2>Mission, Vision & Values</h2>
+                <p>The guiding principles that drive our operations every day.</p>
+            </div>
+
+            <div class="mission-grid">
+                <!-- Card 1: Mission -->
+                <div class="mission-card fade-up">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>"To empower Singapore's infrastructure growth by providing reliable, Compliance-focused, and skilled manpower solutions that exceed industry standards."</p>
+                </div>
+
+                <!-- Card 2: Vision -->
+                <div class="mission-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>"To be the most trusted and efficient workforce solutions partner in the Built Environment sector across the region."</p>
+                </div>
+
+                <!-- Card 3: Values -->
+                <div class="mission-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3>Core Values</h3>
+                    <ul class="values-list">
+                        <li><i class="fa-solid fa-square-check"></i> Integrity</li>
+                        <li><i class="fa-solid fa-square-check"></i> Reliability</li>
+                        <li><i class="fa-solid fa-square-check"></i> Safety</li>
+                        <li><i class="fa-solid fa-square-check"></i> Excellence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <h2 style="color: #333; font-weight: 700; margin-bottom: 10px;">Performance Metrics</h2>
+                <p style="color: #888; font-size: 1rem;">Data-driven reliability for mission-critical projects.</p>
+            </div>
+
+            <div class="performance-metrics-grid">
+                <!-- Metric 1 -->
+                <div class="perf-card fade-up">
+                    <div class="perf-top-bar"></div>
+                    <div class="perf-content">
+                        <h3>96%</h3>
+                        <h4>Retention Rate</h4>
+                        <p>High worker stability ensures project continuity and knowledge retention.</p>
+                    </div>
+                </div>
+
+                <!-- Metric 2 -->
+                <div class="perf-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="perf-top-bar"></div>
+                    <div class="perf-content">
+                        <h3>BizSAFE</h3>
+                        <h4>Star Level</h4>
+                        <p>Top-tier risk management compliance for high-risk rail and construction sites.</p>
+                    </div>
+                </div>
+
+                <!-- Metric 3 -->
+                <div class="perf-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="perf-top-bar"></div>
+                    <div class="perf-content">
+                        <h3>48h</h3>
+                        <h4>Avg. Mobilization</h4>
+                        <p>From request to site deployment for general manpower.</p>
+                    </div>
+                </div>
+
+                <!-- Metric 4 -->
+                <div class="perf-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="perf-top-bar"></div>
+                    <div class="perf-content">
+                        <h3>100%</h3>
+                        <h4>MOM Compliance</h4>
+                        <p>Zero demerit points. Full adherence to Employment Act & WSH regulations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Operational Logistics -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Operational Excellence</span>
+                <h2>Back-Office Logistics</h2>
+                <p>We handle the complex administrative burden, so you don't have to.</p>
+            </div>
+
+            <div class="logistics-grid">
+                <!-- Card 1 -->
+                <div class="logistics-card fade-up">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-id-card-clip"></i>
+                    </div>
+                    <h3>Work Permit & S-Pass</h3>
+                    <p>Full application and processing of Work Permits & S-Pass for all foreign workers. We manage MOM levy payments and ensure timely renewals.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Security Bonds</h3>
+                    <p>We manage the $5,000 security bond for each non-Malaysian worker, ensuring it is active with
+                        insurers before arrival.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3>Medical Insurance</h3>
+                    <p>Comprehensive coverage including the mandatory Medical Insurance ($60k/year) and Primary Care
+                        Plan (PCP) for dormitory workers.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.3s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                    </div>
+                    <h3>Payroll & CPF</h3>
+                    <p>Complete payroll processing and CPF contributions management for all deployed workers, ensuring timely and accurate payments every cycle.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.4s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3>Dormitory Logistics</h3>
+                    <p>Accommodation arrangement and dormitory coordination for foreign workers, ensuring compliance with MOM housing standards and regulations.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="logistics-card fade-up" style="transition-delay: 0.5s;">
+                    <div class="log-icon">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3>Repatriation Management</h3>
+                    <p>Full "Exit Process" management including work permit cancellation, tax clearance, and air ticket
+                        logistics to prevent bond forfeiture.</p>
+                </div>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="about-cta-banner fade-up">
+                <h3>Secure Your Project Timeline with Compliance-focused Manpower</h3>
+                <p>Don't let labor shortages delay your site progress. From Rail Engineering (Rolling Stock/Signaling) to General Construction, we deploy safety-certified (CSOC/BCSS) teams ready for immediate mobilization.</p>
+                <div class="cta-buttons">
+                    <a href="partner.html" class="btn btn-primary">Request Manpower Quote</a>
+                    <a href="services-rail.html" class="btn btn-outline" style="background: white;">Explore Rail
+                        Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching Home Page) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="assets/images/FooterRNSlogo.svg" alt="RNS Technology" class="footer-logo-img">
+                </a>
+                <p class="footer-about">RNS Technologies is a leading Manpower Supply Company in Singapore, providing workforce solutions</p>
+                <p class="footer-copyright-inline">&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>Email : rnstechnology23@gmail.com</li>
+                    <li>Phone : +65 8112 9520</li>
+                    <li>Address : 625 Aljunied Road #02-02 Singapore - 389836</li>
+                    <li>Reg No.: 202331395D</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Directs</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                    <li><a href="index.html#contact">Get Quote</a></li>
+                    <li><a href="partner.html">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

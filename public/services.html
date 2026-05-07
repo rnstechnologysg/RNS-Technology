@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://rnstechnologysg.com/services.html">
+    <title>Our Services | RNS Technology – Manpower Supply Solutions Singapore</title>
+    <meta name="description"
+        content="Explore RNS Technology's comprehensive manpower services: construction workers, rail engineering staff, skilled trades, safety supervision, and facility cleaning crews.">
+    <meta name="keywords"
+        content="manpower services singapore, construction workers, rail engineering staff, skilled trades, MOM compliance">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === Services Page Specific Styles (Matching Home Page Aesthetic) === */
+
+        /* Clean White Hero */
+        .services-hero-clean {
+            background-color: var(--white);
+            padding-top: 140px;
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .services-hero-clean h1 {
+            color: #111;
+            font-weight: 700;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .services-hero-clean p {
+            color: #888;
+            font-size: 1rem;
+            max-width: 750px;
+            margin: 0 auto 25px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .services-hero-clean .breadcrumb-clean {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .services-hero-clean .breadcrumb-clean a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .services-hero-clean .breadcrumb-clean a:hover {
+            color: var(--primary-color);
+        }
+
+        .services-hero-clean .breadcrumb-clean span {
+            color: #ccc;
+        }
+
+        /* Service Cards Grid */
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .svc-card {
+            padding: 35px 28px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .svc-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: width 0.4s ease;
+        }
+
+        .svc-card:hover::before {
+            width: 100%;
+        }
+
+        .svc-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .svc-card .svc-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .svc-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .svc-card p {
+            color: #666;
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        /* --- Color Themes for Service Cards --- */
+        /* Blue */
+        .svc-card.svc-blue { background: #eff6ff; border-color: #dbeafe; }
+        .svc-card.svc-blue .svc-icon { background: linear-gradient(135deg, #2563eb, #60a5fa); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25); }
+        .svc-card.svc-blue h3 { color: #1e40af; }
+        .svc-card.svc-blue::before { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+
+        /* Orange */
+        .svc-card.svc-orange { background: #fff7ed; border-color: #ffedd5; }
+        .svc-card.svc-orange .svc-icon { background: linear-gradient(135deg, #ea580c, #fb923c); box-shadow: 0 6px 18px rgba(234, 88, 12, 0.25); }
+        .svc-card.svc-orange h3 { color: #c2410c; }
+        .svc-card.svc-orange::before { background: linear-gradient(90deg, #ea580c, #fb923c); }
+
+        /* Purple */
+        .svc-card.svc-purple { background: #f5f3ff; border-color: #ede9fe; }
+        .svc-card.svc-purple .svc-icon { background: linear-gradient(135deg, #7c3aed, #a78bfa); box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25); }
+        .svc-card.svc-purple h3 { color: #6d28d9; }
+        .svc-card.svc-purple::before { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+
+        /* Rose */
+        .svc-card.svc-rose { background: #fff1f2; border-color: #ffe4e6; }
+        .svc-card.svc-rose .svc-icon { background: linear-gradient(135deg, #e11d48, #fb7185); box-shadow: 0 6px 18px rgba(225, 29, 72, 0.25); }
+        .svc-card.svc-rose h3 { color: #be123c; }
+        .svc-card.svc-rose::before { background: linear-gradient(90deg, #e11d48, #fb7185); }
+
+        /* Sourcing Strategy Cards */
+        .sourcing-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .sourcing-card {
+            background: #f9fafb;
+            border: 1px solid #f0f0f0;
+            padding: 35px 30px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .sourcing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+            border-color: #e0e0e0;
+        }
+
+        .sourcing-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .sourcing-card-header .svc-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        /* Sourcing card colors */
+        .sourcing-card.src-teal { background: #f0fdfa; border-color: #ccfbf1; }
+        .sourcing-card.src-teal .svc-icon { background: linear-gradient(135deg, #0d9488, #2dd4bf); box-shadow: 0 6px 18px rgba(13, 148, 136, 0.25); }
+        .sourcing-card.src-teal .check-item i { color: #0d9488; }
+        .sourcing-card.src-teal h3 { color: #0f766e; }
+
+        .sourcing-card.src-indigo { background: #eef2ff; border-color: #e0e7ff; }
+        .sourcing-card.src-indigo .svc-icon { background: linear-gradient(135deg, #4f46e5, #818cf8); box-shadow: 0 6px 18px rgba(79, 70, 229, 0.25); }
+        .sourcing-card.src-indigo .check-item i { color: #4f46e5; }
+        .sourcing-card.src-indigo h3 { color: #4338ca; }
+
+        .sourcing-card-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+            color: #111;
+        }
+
+        .sourcing-card .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .sourcing-card .check-item i {
+            color: var(--secondary-color);
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+
+        /* Process Steps Redesign */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .process-card {
+            background: #f9fafb;
+            border: 1px solid #f0f0f0;
+            padding: 35px 25px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .process-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+            border-color: #e0e0e0;
+        }
+
+        .process-card .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 18px;
+        }
+
+        /* Process card colors */
+        .process-card.proc-blue .step-num { background: linear-gradient(135deg, #2563eb, #60a5fa); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25); }
+        .process-card.proc-blue h3 { color: #1e40af; }
+        .process-card.proc-blue { background: #eff6ff; border-color: #dbeafe; }
+
+        .process-card.proc-orange .step-num { background: linear-gradient(135deg, #ea580c, #fb923c); box-shadow: 0 6px 18px rgba(234, 88, 12, 0.25); }
+        .process-card.proc-orange h3 { color: #c2410c; }
+        .process-card.proc-orange { background: #fff7ed; border-color: #ffedd5; }
+
+        .process-card.proc-purple .step-num { background: linear-gradient(135deg, #7c3aed, #a78bfa); box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25); }
+        .process-card.proc-purple h3 { color: #6d28d9; }
+        .process-card.proc-purple { background: #f5f3ff; border-color: #ede9fe; }
+
+        .process-card.proc-rose .step-num { background: linear-gradient(135deg, #e11d48, #fb7185); box-shadow: 0 6px 18px rgba(225, 29, 72, 0.25); }
+        .process-card.proc-rose h3 { color: #be123c; }
+        .process-card.proc-rose { background: #fff1f2; border-color: #ffe4e6; }
+
+        .process-card h3 {
+            font-size: 1.15rem;
+            color: #111;
+            margin-bottom: 10px;
+        }
+
+        .process-card p {
+            color: #666;
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* CTA Banner */
+        .svc-cta-banner {
+            margin-top: 80px;
+            background: #f4fdf8;
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid #d0f0e0;
+            text-align: center;
+        }
+
+        .svc-cta-banner h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .svc-cta-banner p {
+            color: #555;
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .svc-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .svc-grid {
+                grid-template-columns: 1fr;
+            }
+            .sourcing-row {
+                grid-template-columns: 1fr;
+            }
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-hero-clean {
+                padding-top: 110px;
+                padding-bottom: 50px;
+            }
+            .svc-cta-banner {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Matching Home Page) -->
+    <header class="header light-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="assets/images/RNS_Logo.svg" alt="RNS Technology" style="width: 155px; height: 25px;">
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="services-rail.html">Rail & WSH</a></li>
+                    <li><a href="index.html#contact" class="btn-nav">Get Quote</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Clean White Hero -->
+    <section class="services-hero-clean">
+        <div class="container fade-up" style="max-width: 900px;">
+            <div class="breadcrumb-clean" style="margin-bottom: 20px;">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Services</span>
+            </div>
+            <h1>Comprehensive Manpower Services</h1>
+            <p>Singapore-Compliance workforce solutions tailored for construction, rail engineering, and facility services — from sourcing to deployment, we handle everything.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                <a href="index.html#contact" style="color: var(--secondary-color); font-weight: 600; text-decoration: none; font-size: 1rem;">Contact us</a>
+                <a href="partner.html" class="btn btn-primary" style="background: var(--secondary-color); color: white; font-weight: 600; padding: 10px 25px; border-radius: 8px; border: none; box-shadow: 0 4px 15px rgba(46, 191, 102, 0.3);">Request Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Our Expertise</span>
+                <h2>What We Provide</h2>
+                <p>Tailored staffing solutions to meet the dynamic needs of your business.</p>
+            </div>
+
+            <div class="svc-grid">
+                <!-- Construction -->
+                <div class="svc-card svc-blue fade-up">
+                    <div class="svc-icon">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3>Construction Manpower</h3>
+                    <p>We handle all permits, levy optimization, and MYE waiver compliance. Local & Foreign workforce supply for construction sites.</p>
+                </div>
+
+                <!-- Rail -->
+                <div class="svc-card svc-orange fade-up" style="transition-delay: 0.1s;">
+                    <div class="svc-icon">
+                        <i class="fa-solid fa-train"></i>
+                    </div>
+                    <h3>Rail Engineering</h3>
+                    <p>LTA Track Access & Safety Compliance. We manage track-side safety, fatigue management, and certified trackmen supply.</p>
+                </div>
+
+                <!-- Workforce Upgrading -->
+                <div class="svc-card svc-purple fade-up" style="transition-delay: 0.2s;">
+                    <div class="svc-icon">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3>Workforce Upgrading</h3>
+                    <p>Navigate the NTS framework, Green Card (AWSHCS), and R1 upgrading pathways (CoreTrade).</p>
+                </div>
+
+                <!-- Facility -->
+                <div class="svc-card svc-rose fade-up" style="transition-delay: 0.3s;">
+                    <div class="svc-icon">
+                        <i class="fa-solid fa-broom"></i>
+                    </div>
+                    <h3>Facility Services</h3>
+                    <p>Efficient cleaning and facility maintenance crews for commercial and industrial premises.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Capabilities (from home page) -->
+    <section id="capabilities" class="capabilities-section section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header text-center fade-up" style="margin-bottom: 40px;">
+                <h2 style="color: #333; font-weight: 700; margin-bottom: 10px;">Our Capabilities</h2>
+                <p style="color: #777; font-size: 1rem; max-width: 800px; margin: 0 auto;">Singapore-Compliance Workforce Solutions Tailored manpower supply strategies for your business needs.</p>
+            </div>
+
+            <div class="capabilities-list">
+                <!-- Card 1 -->
+                <div class="capability-row fade-up">
+                    <div class="capability-image">
+                        <img src="assets/images/GeneralCons.svg" alt="General Construction Manpower">
+                    </div>
+                    <div class="capability-card">
+                        <h3>General Construction Manpower</h3>
+                        <p>We deploy reliable, MOM-Compliance general workers specifically for Singapore construction sites and infrastructure projects. We handle full work pass compliance for approved source countries.</p>
+                        <h4>Keys</h4>
+                        <ul class="capability-features">
+                            <li><span class="outline-dot"></span> General Construction Workers (PRC/India/Bangladesh)</li>
+                            <li><span class="outline-dot"></span> Lifting Supervisors & Signalmen</li>
+                            <li><span class="outline-dot"></span> Site Erection Teams</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="capability-row reverse fade-up">
+                    <div class="capability-image">
+                        <img src="assets/images/SkilledTechTrade.svg" alt="Skilled Technical Trades">
+                    </div>
+                    <div class="capability-card">
+                        <h3>Skilled Technical Trades</h3>
+                        <p>Source highly skilled technical professionals for Rail Engineering and Structural projects. We verify all trade certificates (CoreTrade/Multi-Skilling) and safety credentials.</p>
+                        <h4>Keys</h4>
+                        <ul class="capability-features">
+                            <li><span class="outline-dot"></span> Certified Welders (3G/4G/6G)</li>
+                            <li><span class="outline-dot"></span> Track & P-Way Technicians</li>
+                            <li><span class="outline-dot"></span> Electrical & Mechanical Fitters</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="capability-row fade-up">
+                    <div class="capability-image">
+                        <img src="assets/images/Safety.svg" alt="Safety & Site Supervision">
+                    </div>
+                    <div class="capability-card">
+                        <h3>Safety & Site Supervision</h3>
+                        <p>Experienced supervisors to ensure your project meets WSH safety standards and timeline targets.</p>
+                        <h4>Keys</h4>
+                        <ul class="capability-features">
+                            <li><span class="outline-dot"></span> Site Safety Supervisors (SSS)</li>
+                            <li><span class="outline-dot"></span> WSH Coordinators</li>
+                            <li><span class="outline-dot"></span> Project Coordinators</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="capability-row reverse fade-up">
+                    <div class="capability-image">
+                        <img src="assets/images/SitecleaningandManintanace.svg" alt="Site Cleaning & Maintenance">
+                    </div>
+                    <div class="capability-card">
+                        <h3>Site Cleaning & Maintenance</h3>
+                        <p>Keep your construction site or dormitory premises safe and Compliance-focused. We provide dedicated cleaning crews for post-construction cleanup and site maintenance.</p>
+                        <h4>Keys</h4>
+                        <ul class="capability-features">
+                            <li><span class="outline-dot"></span> Post-Construction Cleaning</li>
+                            <li><span class="outline-dot"></span> Dormitory Maintenance Crew</li>
+                            <li><span class="outline-dot"></span> Site Debris Disposal Support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sourcing Strategy -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Sourcing Strategy</span>
+                <h2>Local & Foreign Manpower Solutions</h2>
+                <p>We manage the entire recruitment and compliance lifecycle.</p>
+            </div>
+
+            <div class="sourcing-row">
+                <!-- Local Manpower -->
+                <div class="sourcing-card src-teal fade-up">
+                    <div class="sourcing-card-header">
+                        <div class="svc-icon">
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+                        <h3>Local Placement</h3>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Singaporeans & PRs</strong> for core supervision.</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>CPF & Statutory Compliance</strong> for all local employees.</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Rapid Candidate Shortlisting.</span>
+                    </div>
+                </div>
+
+                <!-- Foreign Manpower -->
+                <div class="sourcing-card src-indigo fade-up" style="transition-delay: 0.1s;">
+                    <div class="sourcing-card-header">
+                        <div class="svc-icon">
+                            <i class="fa-solid fa-plane-arrival"></i>
+                        </div>
+                        <h3>Foreign Recruitment</h3>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>NTS & PRC</strong> Sourcing (Construction).</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span><strong>Work Permit / S-Pass</strong> Transfer Processing.</span>
+                    </div>
+                    <div class="check-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Medical & Logistics Coordination.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Process -->
+    <section class="section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">How It Works</span>
+                <h2>Our Rapid Deployment Process</h2>
+                <p>From request to on-site deployment in 4 simple steps.</p>
+            </div>
+
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-card proc-blue fade-up">
+                    <div class="step-num">1</div>
+                    <h3>Consultation & Requirements</h3>
+                    <p>We work closely with you to understand your specific manpower needs, project timeline, and skill requirements.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-card proc-orange fade-up" style="transition-delay: 0.1s;">
+                    <div class="step-num">2</div>
+                    <h3>Sourcing & Screening</h3>
+                    <p>Our team taps into our extensive database. We conduct rigorous interviews, skill checks, and verify certifications.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-card proc-purple fade-up" style="transition-delay: 0.2s;">
+                    <div class="step-num">3</div>
+                    <h3>Deployment & Compliance</h3>
+                    <p>We handle all administrative tasks, work passes (MOM), safety courses, and onboarding logistics.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-card proc-rose fade-up" style="transition-delay: 0.3s;">
+                    <div class="step-num">4</div>
+                    <h3>Ongoing Management</h3>
+                    <p>We provide continuous payroll management, welfare support, and replacement guarantees to ensure zero disruption.</p>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="svc-cta-banner fade-up">
+                <h3>Secure Your Project Timeline with Compliance-focused Manpower</h3>
+                <p>Don't let labor shortages delay your site progress. From Rail Engineering (Rolling Stock/Signaling) to General Construction, we deploy safety-certified (CSOC/BCSS) teams ready for immediate mobilization.</p>
+                <div class="cta-buttons">
+                    <a href="partner.html" class="btn btn-primary">Request Manpower Quote</a>
+                    <a href="services-rail.html" class="btn btn-outline" style="background: white;">Explore Rail Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching Home Page) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="assets/images/FooterRNSlogo.svg" alt="RNS Technology" class="footer-logo-img">
+                </a>
+                <p class="footer-about">RNS Technologies is a leading Manpower Supply Company in Singapore, providing workforce solutions</p>
+                <p class="footer-copyright-inline">&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>Email : rnstechnology23@gmail.com</li>
+                    <li>Phone : +65 8112 9520</li>
+                    <li>Address : 625 Aljunied Road #02-02 Singapore - 389836</li>
+                    <li>Reg No.: 202331395D</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Directs</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                    <li><a href="index.html#contact">Get Quote</a></li>
+                    <li><a href="partner.html">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

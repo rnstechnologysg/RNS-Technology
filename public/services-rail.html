@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://rnstechnologysg.com/services-rail.html">
+    <title>Rail Engineering & Technical Solutions | RNS Technology</title>
+    <meta name="description"
+        content="Specialized rail engineering manpower for Rolling Stock, Signalling, and P-Way. Supporting the localization of Singapore's rail infrastructure expertise.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === Rail Page Specific Styles === */
+
+        /* Clean White Hero */
+        .rail-hero-clean {
+            background-color: var(--white);
+            padding-top: 140px;
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .rail-hero-clean h1 {
+            color: #111;
+            font-weight: 700;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .rail-hero-clean p {
+            color: #888;
+            font-size: 1rem;
+            max-width: 750px;
+            margin: 0 auto 25px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .rail-hero-clean .breadcrumb-clean {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .rail-hero-clean .breadcrumb-clean a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .rail-hero-clean .breadcrumb-clean a:hover {
+            color: var(--primary-color);
+        }
+
+        .rail-hero-clean .breadcrumb-clean span {
+            color: #ccc;
+        }
+
+        /* Tech Cards - Colorful Variants */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .tech-card {
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .tech-header {
+            color: var(--white);
+            padding: 22px 24px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .tech-header i {
+            color: var(--white);
+            font-size: 1.6rem;
+        }
+
+        .tech-header h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.3px;
+        }
+
+        .tech-body {
+            padding: 24px;
+            flex-grow: 1;
+        }
+
+        .tech-intro-text {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .tech-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-list li {
+            margin-bottom: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .tech-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-list i {
+            margin-top: 3px;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .tech-list strong {
+            color: #333;
+            margin-right: 4px;
+        }
+
+        /* --- Tech Card Color Themes --- */
+        /* Orange - Rolling Stock */
+        .tech-card.tc-orange { background: #fff7ed; border-color: #ffedd5; }
+        .tech-card.tc-orange .tech-header { background: linear-gradient(135deg, #ea580c, #fb923c); }
+
+        /* Purple - Signalling */
+        .tech-card.tc-purple { background: #f5f3ff; border-color: #ede9fe; }
+        .tech-card.tc-purple .tech-header { background: linear-gradient(135deg, #7c3aed, #a78bfa); }
+
+        /* Blue - P-Way */
+        .tech-card.tc-blue { background: #eff6ff; border-color: #dbeafe; }
+        .tech-card.tc-blue .tech-header { background: linear-gradient(135deg, #2563eb, #60a5fa); }
+
+        /* Localization Section */
+        .local-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .local-text h3 {
+            color: #111;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+        }
+
+        .local-text p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .local-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .local-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* WSH Section */
+        .wsh-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .wsh-image {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .wsh-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .wsh-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .wsh-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .wsh-item .wsh-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .wsh-item .wsh-icon.wsh-teal { background: linear-gradient(135deg, #0d9488, #2dd4bf); box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25); }
+        .wsh-item .wsh-icon.wsh-rose { background: linear-gradient(135deg, #e11d48, #fb7185); box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25); }
+        .wsh-item .wsh-icon.wsh-amber { background: linear-gradient(135deg, #d97706, #fbbf24); box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25); }
+
+        .wsh-item strong {
+            display: block;
+            color: #111;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+
+        .wsh-item span {
+            font-size: 0.88rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* CTA Banner */
+        .rail-cta-banner {
+            margin-top: 80px;
+            background: #f4fdf8;
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid #d0f0e0;
+            text-align: center;
+        }
+
+        .rail-cta-banner h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .rail-cta-banner p {
+            color: #555;
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+            .local-section, .wsh-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .rail-hero-clean {
+                padding-top: 110px;
+                padding-bottom: 50px;
+            }
+            .rail-cta-banner {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Matching Home Page) -->
+    <header class="header light-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="assets/images/RNS_Logo.svg" alt="RNS Technology" style="width: 155px; height: 25px;">
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="services-rail.html" class="active">Rail & WSH</a></li>
+                    <li><a href="index.html#contact" class="btn-nav">Get Quote</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Clean White Hero -->
+    <section class="rail-hero-clean">
+        <div class="container fade-up" style="max-width: 900px;">
+            <div class="breadcrumb-clean" style="margin-bottom: 20px;">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="services.html">Services</a>
+                <span>/</span>
+                <span>Rail & WSH</span>
+            </div>
+            <h1>Rail Engineering & WSH</h1>
+            <p>Supporting the LTA mandate for localized engineering expertise in Rolling Stock, Signalling, and P-Way.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                <a href="index.html#contact" style="color: var(--secondary-color); font-weight: 600; text-decoration: none; font-size: 1rem;">Contact us</a>
+                <a href="partner.html" class="btn btn-primary" style="background: var(--secondary-color); color: white; font-weight: 600; padding: 10px 25px; border-radius: 8px; border: none; box-shadow: 0 4px 15px rgba(46, 191, 102, 0.3);">Request Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localization Strategy -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">The Localization Mandate</span>
+                <h2>Building Domestic Capabilities</h2>
+                <p>Moving from OEM-reliance to local mastery. We supply the technical talent that keeps Singapore's rail network moving.</p>
+            </div>
+
+            <div class="local-section">
+                <div class="local-text fade-up">
+                    <h3>The Shift to Local Expertise</h3>
+                    <p>In the past, diagnosing complex faults meant relying on OEMs from Europe or Japan. Today, major
+                        operators like SMRT and SBS Transit are aggressively pursuing <strong>"localised support
+                            arrangements"</strong>.</p>
+                    <p>RNS Technology SG is aligned with this national agenda. We don't just supply "technicians"; we
+                        supply specialists capable of deep diagnostics, component-level repair, and safety-critical
+                        maintenance.</p>
+                </div>
+                <div class="local-image fade-up">
+                    <img src="assets/images/rail_local_expertise_training.png" alt="Engineering Training Singapore">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Competencies -->
+    <section class="section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Technical Competencies</span>
+                <h2>Specialized Engineering Profiles</h2>
+            </div>
+
+            <div class="tech-grid">
+                <!-- Rolling Stock -->
+                <div class="tech-card tc-orange fade-up">
+                    <div class="tech-header">
+                        <i class="fa-solid fa-train"></i>
+                        <h4>Rolling Stock Technicians</h4>
+                    </div>
+                    <div class="tech-body">
+                        <p class="tech-intro-text">First line of defense for EMUs and Locomotives.</p>
+                        <ul class="tech-list">
+                            <li><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> <span><strong>Propulsion:</strong> Troubleshooting traction motors, inverters, and current collector shoes.</span></li>
+                            <li><i class="fa-solid fa-wind" style="color: #60a5fa;"></i> <span><strong>Pneumatics:</strong> Servicing air compressors and brake calipers with leak precision.</span></li>
+                            <li><i class="fa-solid fa-laptop-medical" style="color: #818cf8;"></i> <span><strong>Diagnostics:</strong> Using TCMS to verify electronic cards and train logic.</span></li>
+                            <li><i class="fa-solid fa-snowflake" style="color: #38bdf8;"></i> <span><strong>Interior:</strong> HVAC and passenger info systems maintenance.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Signalling -->
+                <div class="tech-card tc-purple fade-up" style="transition-delay: 0.1s;">
+                    <div class="tech-header">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                        <h4>Signalling & Comms</h4>
+                    </div>
+                    <div class="tech-body">
+                        <p class="tech-intro-text">The "Brain" of the railway network.</p>
+                        <ul class="tech-list">
+                            <li><i class="fa-solid fa-server" style="color: #8b5cf6;"></i> <span><strong>Interlocking:</strong> Maintenance of Computer-Based Interlocking (CBI) and relay rooms.</span></li>
+                            <li><i class="fa-solid fa-wifi" style="color: #06b6d4;"></i> <span><strong>CBTC Support:</strong> Testing moving-block systems for higher train frequency.</span></li>
+                            <li><i class="fa-solid fa-route" style="color: #f97316;"></i> <span><strong>Trackside:</strong> Point machines, Axle Counters, and Balise transponders.</span></li>
+                            <li><i class="fa-solid fa-door-closed" style="color: #10b981;"></i> <span><strong>PSD:</strong> Integrated testing of Platform Screen Door signalling interfaces.</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- P-Way -->
+                <div class="tech-card tc-blue fade-up" style="transition-delay: 0.2s;">
+                    <div class="tech-header">
+                        <i class="fa-solid fa-road"></i>
+                        <h4>Permanent Way (P-Way)</h4>
+                    </div>
+                    <div class="tech-body">
+                        <p class="tech-intro-text">Ensuring geometric integrity of the track.</p>
+                        <ul class="tech-list">
+                            <li><i class="fa-solid fa-magnifying-glass-chart" style="color: #ef4444;"></i> <span><strong>Rail Flaw Detection:</strong> Ultrasonic (RFD) testing for internal cracks.</span></li>
+                            <li><i class="fa-solid fa-hammer" style="color: #d97706;"></i> <span><strong>Sleeper Works:</strong> Replacement of concrete/timber sleepers and ballast tamping.</span></li>
+                            <li><i class="fa-solid fa-plug" style="color: #f59e0b;"></i> <span><strong>Third Rail:</strong> Alignment inspection for consistent power contact.</span></li>
+                            <li><i class="fa-solid fa-shuffle" style="color: #6366f1;"></i> <span><strong>Turnout Maintenance:</strong> Critical inspection of switches and crossings.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workplace Safety & Health (WSH) -->
+    <section class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Safety First</span>
+                <h2>Workplace Safety & Health (WSH)</h2>
+                <p>Comprehensive safety management solutions for high-risk environments.</p>
+            </div>
+
+            <div class="wsh-grid">
+                <div class="wsh-image fade-up">
+                    <img src="assets/images/wsh_safety_officer.png" alt="WSH Safety Officer on Site">
+                </div>
+                <div class="fade-up">
+                    <h3 style="color: #111; font-size: 1.4rem; margin-bottom: 25px;">Safety Personnel & Compliance</h3>
+                    <p style="color: #555; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px;">We supply qualified safety professionals to ensure
+                        your project meets all MOM regulations and BizSAFE standards.</p>
+
+                    <div class="wsh-item">
+                        <div class="wsh-icon wsh-teal">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <div>
+                            <strong>WSH Officers (WSHO)</strong>
+                            <span>Registered officers to implement and monitor safety management systems.</span>
+                        </div>
+                    </div>
+
+                    <div class="wsh-item">
+                        <div class="wsh-icon wsh-rose">
+                            <i class="fa-solid fa-hard-hat"></i>
+                        </div>
+                        <div>
+                            <strong>Site Safety Supervisors (SSS)</strong>
+                            <span>On-ground supervision to enforce safety protocols and conduct toolbox meetings.</span>
+                        </div>
+                    </div>
+
+                    <div class="wsh-item">
+                        <div class="wsh-icon wsh-amber">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <strong>Risk Management (BizSAFE)</strong>
+                            <span>Consultancy for Risk Assessment (RA) and Safe Work Procedures (SWP).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="rail-cta-banner fade-up">
+                <h3>Need Specialized Rail Engineering Staff?</h3>
+                <p>From Rolling Stock technicians to Signalling engineers, we deploy safety-certified teams with deep technical expertise ready for immediate mobilization.</p>
+                <div class="cta-buttons">
+                    <a href="partner.html" class="btn btn-primary">Request Manpower Quote</a>
+                    <a href="services.html" class="btn btn-outline" style="background: white;">View All Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching Home Page) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="assets/images/FooterRNSlogo.svg" alt="RNS Technology" class="footer-logo-img">
+                </a>
+                <p class="footer-about">RNS Technologies is a leading Manpower Supply Company in Singapore, providing workforce solutions</p>
+                <p class="footer-copyright-inline">&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>Email : rnstechnology23@gmail.com</li>
+                    <li>Phone : +65 8112 9520</li>
+                    <li>Address : 625 Aljunied Road #02-02 Singapore - 389836</li>
+                    <li>Reg No.: 202331395D</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Directs</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                    <li><a href="index.html#contact">Get Quote</a></li>
+                    <li><a href="partner.html">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

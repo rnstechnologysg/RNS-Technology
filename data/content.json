@@ -1,0 +1,66 @@
+{
+    "hero": {
+        "headline": "Empowering Businesses with <br><span class=\"text-gradient\">Elite Workforce Solutions</span>",
+        "subheadline": "Singapore's trusted partner for skilled manpower, logistics, and cleaning staff. Fully MOM-compliant and ready to deploy."
+    },
+    "about": {
+        "title": "Driving Efficiency Through People",
+        "description": "At RNS Technology, we believe that the right people drive business success. Established in Singapore, we specialize in providing high-quality, reliable, and compliant manpower solutions across various industries.",
+        "sub_description": "We adhere strictly to Ministry of Manpower (MOM) regulations, ensuring peace of mind for our clients and fair treatment for our staff.",
+        "stats": [
+            {
+                "label": "Staff Deployed",
+                "value": 500
+            },
+            {
+                "label": "Corporate Clients",
+                "value": 50
+            },
+            {
+                "label": "Industry Experience (Years)",
+                "value": 10
+            },
+            {
+                "label": "Support System",
+                "value": "24/7"
+            }
+        ]
+    },
+    "services": [
+        {
+            "title": "General Manpower",
+            "desc": "Reliable general workers for production, events, and ad-hoc projects.",
+            "icon": "fa-users"
+        },
+        {
+            "title": "Skilled Labour",
+            "desc": "Certified technicians, electricians, and tradesmen for specialized tasks.",
+            "icon": "fa-helmet-safety"
+        },
+        {
+            "title": "Cleaning Crew",
+            "desc": "Professional cleaning staff for commercial, industrial, and office spaces.",
+            "icon": "fa-broom"
+        },
+        {
+            "title": "Logistics Staff",
+            "desc": "Drivers, packers, and warehouse assistants to streamline your supply chain.",
+            "icon": "fa-truck-moving"
+        },
+        {
+            "title": "Admin & Office",
+            "desc": "Temporary and permanent administrative support and receptionists.",
+            "icon": "fa-laptop-file"
+        },
+        {
+            "title": "Security Workforce",
+            "desc": "Trained and licensed security personnel for premises protection.",
+            "icon": "fa-user-shield"
+        }
+    ],
+    "contact": {
+        "phone": "+65 6123 4567",
+        "email": "info@rnstechnology.sg",
+        "address": "123 Robinson Road, #10-01, Singapore 068913"
+    }
+}

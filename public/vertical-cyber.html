@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNS Cyber | Secure Infrastructure</title>
+    <meta name="description"
+        content="The OT Security Specialist. Bridging the gap between IT and Operational Technology. SCADA, ICS, and Digital Rail Security.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* Cyber Specific Theme Components */
+        :root {
+            --cyber-blue: #0ea5e9;
+            --cyber-dark: #0f172a;
+        }
+
+        .hero-cyber {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('assets/images/network-infrastructure.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 0 100px;
+            text-align: center;
+        }
+
+        .btn-cyber {
+            background-color: transparent;
+            color: var(--cyber-blue);
+            border: 2px solid var(--cyber-blue);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-cyber:hover {
+            background-color: var(--cyber-blue);
+            color: white;
+            box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">RNS <span class="highlight"
+                    style="color: var(--cyber-blue);">Cyber</span></a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Hub</a></li>
+                    <li><a href="vertical-rail.html">Rail</a></li>
+                    <li><a href="vertical-construction.html">Construction</a></li>
+                    <li><a href="#" class="btn-primary btn-sm"
+                            style="background:#0f172a; border: 1px solid var(--cyber-blue);">Client Portal</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cyber Hero -->
+    <section class="hero-cyber">
+        <div class="container fade-up">
+            <span style="color: var(--cyber-blue); font-weight: 700; letter-spacing: 2px;">THE OT SECURITY
+                SPECIALIST</span>
+            <h1 style="font-size: 3.5rem; margin: 20px 0;">Convergence of IT & OT</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; color: #94a3b8;">
+                Modern infrastructure is data-driven. We provide the niche talent to secure <strong>SCADA</strong>,
+                <strong>ICS</strong>, and <strong>Digital Rail</strong> systems from cyber-physical threats.
+            </p>
+            <div style="margin-top: 40px;">
+                <a href="#ot-security" class="btn-cyber">Explore OT Solutions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OT Security Section -->
+    <section id="ot-security" class="section-padding">
+        <div class="container">
+            <div class="row" style="display:flex; align-items:center; gap:50px;">
+                <div class="col-md-6 fade-up">
+                    <!-- Tech Visualization -->
+                    <div style="position:relative; padding:40px; border:1px solid #e2e8f0; border-radius:10px;">
+                        <i class="fa-solid fa-server"
+                            style="font-size:8rem; color: #e2e8f0; display:block; margin:0 auto;"></i>
+                        <div
+                            style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;">
+                            <span style="font-size:4rem; color: var(--cyber-blue);; font-style: normal;">🛡</span>
+                            <div style="margin-top:10px; font-weight:bold; color:var(--cyber-dark);">SECURE</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 fade-up">
+                    <h2 style="margin-bottom:20px;">Operational Technology (OT) Security</h2>
+                    <p style="margin-bottom:20px;">
+                        RNS Technology moves beyond standard IT recruitment. We understand that a breach in a rail
+                        signaling system or a smart building's HVAC controller has physical consequences.
+                    </p>
+                    <div class="service-list">
+                        <div style="margin-bottom:15px;">
+                            <h4 style="color: var(--cyber-blue);"><i class="fa-solid fa-microchip"></i> SCADA Security
+                            </h4>
+                            <p style="font-size:0.9rem;">Consultants specializing in Modbus, DNP3, and IEC 61850
+                                protocols.</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h4 style="color: var(--cyber-blue);"><i class="fa-solid fa-industry"></i> ICS Architects
+                            </h4>
+                            <p style="font-size:0.9rem;">Designing secure industrial control systems for manufacturing
+                                and utility clients.</p>
+                        </div>
+                        <div style="margin-bottom:15px;">
+                            <h4 style="color: var(--cyber-blue);"><i class="fa-solid fa-train"></i> Digital Rail Cyber
+                            </h4>
+                            <p style="font-size:0.9rem;">Securing the "Internet of Trains" and ETCS communications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">RNS <span class="highlight">Technology</span></a>
+                <p>Securing Critical Infrastructure.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Sectors</h4>
+                <ul>
+                    <li><a href="index.html">Main Hub</a></li>
+                    <li><a href="vertical-rail.html">Rail</a></li>
+                    <li><a href="vertical-construction.html">Construction</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Accreditations</h4>
+                <ul>
+                    <li>CREST Member</li>
+                    <li>ISO 27001</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

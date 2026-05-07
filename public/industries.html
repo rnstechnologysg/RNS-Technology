@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://rnstechnologysg.com/industries.html">
+    <title>Industries We Serve | RNS Technology – Manpower Supply Singapore</title>
+    <meta name="description"
+        content="RNS Technology provides specialized manpower for Construction, Rail Engineering, Marine, Oil & Gas, Corporate, and Facility Services sectors in Singapore.">
+    <meta name="keywords"
+        content="construction manpower singapore, rail engineering workforce, marine shipyard workers, oil gas manpower, facility services staff">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* === Industries Page Specific Styles === */
+
+        /* Clean White Hero */
+        .ind-hero-clean {
+            background-color: var(--white);
+            padding-top: 140px;
+            padding-bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .ind-hero-clean h1 {
+            color: #111;
+            font-weight: 700;
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            margin-bottom: 15px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .ind-hero-clean p {
+            color: #888;
+            font-size: 1rem;
+            max-width: 750px;
+            margin: 0 auto 25px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .ind-hero-clean .breadcrumb-clean {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .ind-hero-clean .breadcrumb-clean a {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .ind-hero-clean .breadcrumb-clean a:hover {
+            color: var(--primary-color);
+        }
+
+        .ind-hero-clean .breadcrumb-clean span {
+            color: #ccc;
+        }
+
+        /* Industry Cards Grid */
+        .ind-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .ind-card {
+            padding: 35px 28px;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+
+        .ind-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            transition: width 0.4s ease;
+        }
+
+        .ind-card:hover::before {
+            width: 100%;
+        }
+
+        .ind-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+        }
+
+        .ind-card .ind-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .ind-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .ind-card p {
+            color: #555;
+            font-size: 0.88rem;
+            line-height: 1.65;
+            margin: 0 0 15px;
+        }
+
+        .ind-card .ind-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ind-card .ind-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.6);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+
+        /* --- Color Themes --- */
+        /* Blue - Construction */
+        .ind-card.ind-blue { background: #eff6ff; border-color: #dbeafe; }
+        .ind-card.ind-blue .ind-icon { background: linear-gradient(135deg, #2563eb, #60a5fa); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25); }
+        .ind-card.ind-blue h3 { color: #1e40af; }
+        .ind-card.ind-blue::before { background: linear-gradient(90deg, #2563eb, #60a5fa); }
+        .ind-card.ind-blue .ind-tag { color: #1e40af; background: #dbeafe; }
+
+        /* Orange - Rail */
+        .ind-card.ind-orange { background: #fff7ed; border-color: #ffedd5; }
+        .ind-card.ind-orange .ind-icon { background: linear-gradient(135deg, #ea580c, #fb923c); box-shadow: 0 6px 18px rgba(234, 88, 12, 0.25); }
+        .ind-card.ind-orange h3 { color: #c2410c; }
+        .ind-card.ind-orange::before { background: linear-gradient(90deg, #ea580c, #fb923c); }
+        .ind-card.ind-orange .ind-tag { color: #c2410c; background: #ffedd5; }
+
+        /* Teal - Marine */
+        .ind-card.ind-teal { background: #f0fdfa; border-color: #ccfbf1; }
+        .ind-card.ind-teal .ind-icon { background: linear-gradient(135deg, #0d9488, #2dd4bf); box-shadow: 0 6px 18px rgba(13, 148, 136, 0.25); }
+        .ind-card.ind-teal h3 { color: #0f766e; }
+        .ind-card.ind-teal::before { background: linear-gradient(90deg, #0d9488, #2dd4bf); }
+        .ind-card.ind-teal .ind-tag { color: #0f766e; background: #ccfbf1; }
+
+        /* Rose - Oil & Gas */
+        .ind-card.ind-rose { background: #fff1f2; border-color: #ffe4e6; }
+        .ind-card.ind-rose .ind-icon { background: linear-gradient(135deg, #e11d48, #fb7185); box-shadow: 0 6px 18px rgba(225, 29, 72, 0.25); }
+        .ind-card.ind-rose h3 { color: #be123c; }
+        .ind-card.ind-rose::before { background: linear-gradient(90deg, #e11d48, #fb7185); }
+        .ind-card.ind-rose .ind-tag { color: #be123c; background: #ffe4e6; }
+
+        /* Purple - Corporate */
+        .ind-card.ind-purple { background: #f5f3ff; border-color: #ede9fe; }
+        .ind-card.ind-purple .ind-icon { background: linear-gradient(135deg, #7c3aed, #a78bfa); box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25); }
+        .ind-card.ind-purple h3 { color: #6d28d9; }
+        .ind-card.ind-purple::before { background: linear-gradient(90deg, #7c3aed, #a78bfa); }
+        .ind-card.ind-purple .ind-tag { color: #6d28d9; background: #ede9fe; }
+
+        /* Amber - Facility */
+        .ind-card.ind-amber { background: #fffbeb; border-color: #fef3c7; }
+        .ind-card.ind-amber .ind-icon { background: linear-gradient(135deg, #d97706, #fbbf24); box-shadow: 0 6px 18px rgba(217, 119, 6, 0.25); }
+        .ind-card.ind-amber h3 { color: #b45309; }
+        .ind-card.ind-amber::before { background: linear-gradient(90deg, #d97706, #fbbf24); }
+        .ind-card.ind-amber .ind-tag { color: #b45309; background: #fef3c7; }
+
+        /* CTA Banner */
+        .ind-cta-banner {
+            margin-top: 80px;
+            background: #f4fdf8;
+            padding: 45px;
+            border-radius: 16px;
+            border: 1px solid #d0f0e0;
+            text-align: center;
+        }
+
+        .ind-cta-banner h3 {
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .ind-cta-banner p {
+            color: #555;
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .ind-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ind-grid {
+                grid-template-columns: 1fr;
+            }
+            .ind-hero-clean {
+                padding-top: 110px;
+                padding-bottom: 50px;
+            }
+            .ind-cta-banner {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header (Matching Home Page) -->
+    <header class="header light-header">
+        <div class="header-container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="assets/images/RNS_Logo.svg" alt="RNS Technology" style="width: 155px; height: 25px;">
+            </a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html" class="active">Industries</a></li>
+                    <li><a href="services-rail.html">Rail & WSH</a></li>
+                    <li><a href="index.html#contact" class="btn-nav">Get Quote</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Clean White Hero -->
+    <section class="ind-hero-clean">
+        <div class="container fade-up" style="max-width: 900px;">
+            <div class="breadcrumb-clean" style="margin-bottom: 20px;">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Industries</span>
+            </div>
+            <h1>Industries We Serve</h1>
+            <p>Specialized workforce solutions tailored to the unique demands of Singapore's core sectors — from construction sites to corporate offices.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+                <a href="index.html#contact" style="color: var(--secondary-color); font-weight: 600; text-decoration: none; font-size: 1rem;">Contact us</a>
+                <a href="partner.html" class="btn btn-primary" style="background: var(--secondary-color); color: white; font-weight: 600; padding: 10px 25px; border-radius: 8px; border: none; box-shadow: 0 4px 15px rgba(46, 191, 102, 0.3);">Request Manpower</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Grid -->
+    <section class="section-padding" style="background: var(--white);">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">Sector Expertise</span>
+                <h2>Dedicated Manpower Across Key Sectors</h2>
+                <p>We deploy trained, safety-certified workforce across Singapore's most demanding industries.</p>
+            </div>
+
+            <div class="ind-grid">
+                <!-- 1. Construction -->
+                <div class="ind-card ind-blue fade-up">
+                    <div class="ind-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>From General Builders to Specialized Tradesmen. We support residential, commercial, and civil engineering projects.</p>
+                    <div class="ind-tags">
+                        <span class="ind-tag">General Workers</span>
+                        <span class="ind-tag">Tradesmen</span>
+                        <span class="ind-tag">Civil Eng.</span>
+                    </div>
+                </div>
+
+                <!-- 2. Logistics -->
+                <div class="ind-card ind-orange fade-up" style="transition-delay: 0.1s;">
+                    <div class="ind-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3>Logistics</h3>
+                    <p>Warehouse assistants, packers, and forklift drivers to keep your supply chain moving.</p>
+                    <div class="ind-tags">
+                        <span class="ind-tag">Warehouse</span>
+                        <span class="ind-tag">Packers</span>
+                        <span class="ind-tag">Forklift</span>
+                    </div>
+                </div>
+
+                <!-- 3. Manufacturing -->
+                <div class="ind-card ind-purple fade-up" style="transition-delay: 0.2s;">
+                    <div class="ind-icon">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Production operators and QA checkers for semiconductor and electronics factories.</p>
+                    <div class="ind-tags">
+                        <span class="ind-tag">Production</span>
+                        <span class="ind-tag">QA Checkers</span>
+                        <span class="ind-tag">Electronics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding" style="background: #f9f9f9;">
+        <div class="container">
+            <div class="ind-cta-banner fade-up">
+                <h3>Need Manpower for Your Industry?</h3>
+                <p>We deploy safety-certified (CSOC/BCSS) teams ready for immediate mobilization across all major sectors in Singapore.</p>
+                <div class="cta-buttons">
+                    <a href="partner.html" class="btn btn-primary">Request Manpower Quote</a>
+                    <a href="services.html" class="btn btn-outline" style="background: white;">View All Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Matching Home Page) -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo-link">
+                    <img src="assets/images/FooterRNSlogo.svg" alt="RNS Technology" class="footer-logo-img">
+                </a>
+                <p class="footer-about">RNS Technologies is a leading Manpower Supply Company in Singapore, providing workforce solutions</p>
+                <p class="footer-copyright-inline">&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul class="footer-contact-list">
+                    <li>Email : rnstechnology23@gmail.com</li>
+                    <li>Phone : +65 8112 9520</li>
+                    <li>Address : 625 Aljunied Road #02-02 Singapore - 389836</li>
+                    <li>Reg No.: 202331395D</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Directs</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html#contact">Contact us</a></li>
+                    <li><a href="index.html#contact">Get Quote</a></li>
+                    <li><a href="partner.html">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

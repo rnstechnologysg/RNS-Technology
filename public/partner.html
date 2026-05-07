@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="rns.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us | RNS Technology</title>
+    <meta name="description"
+        content="Request skilled manpower for your projects. We provide construction workers, rail engineers, and cleaning crews.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/strategic.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">RNS <span class="highlight">Technology</span></a>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="index.html#contact" class="btn-nav">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="hero-content fade-up">
+            <h1>Partner With Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> Benefits
+            </div>
+            <p style="margin-top: 20px; font-size: 1.2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Get the manpower you need to succeed. Fill out the form below to become a corporate partner.
+            </p>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="contact-wrapper" style="max-width: 800px; margin: 0 auto; display: block;">
+                <div class="contact-form-wrapper fade-up" style="width: 100%;">
+                    <div class="section-header text-center" style="margin-bottom: 40px;">
+                        <span class="section-subtitle">Corporate Engagement</span>
+                        <h2>Request Manpower</h2>
+                    </div>
+
+                    <form name="partner-request" method="POST" data-netlify="true" action="/submit">
+                        <!-- Netlify Honeypot -->
+                        <input type="hidden" name="form-name" value="partner-request">
+                        <input type="hidden" name="subject" value="New Partnership Request - RNS Technology">
+                        <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Company Name -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="company_name">Company Name</label>
+                                <input type="text" id="company_name" name="company_name"
+                                    placeholder="Acme Construction Pte Ltd" required>
+                            </div>
+                            <!-- UEN (optional but good for B2B) -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="uen">Company UEN (Optional)</label>
+                                <input type="text" id="uen" name="uen" placeholder="202412345A">
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Contact Person -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="contact_person">Contact Person</label>
+                                <input type="text" id="contact_person" name="contact_person" placeholder="Jane Tan"
+                                    required>
+                            </div>
+                            <!-- Designation -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="designation">Designation</label>
+                                <input type="text" id="designation" name="designation" placeholder="HR Manager">
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Email -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" placeholder="jane@acme.com" required>
+                            </div>
+                            <!-- Mobile No with Country Code -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="mobile">Mobile Number</label>
+                                <div class="mobile-input-group" style="display: flex; gap: 10px;">
+                                    <select name="country_code" style="width: 100px; flex-shrink: 0;" required>
+                                        <option value="+65"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f8.svg" class="flat-icon" alt="🇸"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ec.svg" class="flat-icon" alt="🇬"> +65</option>
+                                        <option value="+60"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f2.svg" class="flat-icon" alt="🇲"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1fe.svg" class="flat-icon" alt="🇾"> +60</option>
+                                        <option value="+91"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1ee.svg" class="flat-icon" alt="🇮"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f3.svg" class="flat-icon" alt="🇳"> +91</option>
+                                        <option value="+86"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1e8.svg" class="flat-icon" alt="🇨"><img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f1f3.svg" class="flat-icon" alt="🇳"> +86</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <input type="tel" id="mobile" name="mobile" placeholder="9123 4567"
+                                        style="flex-grow: 1;" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Project Type (formerly Industry) -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="industry">Project Type / Industry</label>
+                                <select id="industry" name="project_type" required>
+                                    <option value="" disabled selected>Select Project Type</option>
+                                    <option value="Construction">Construction</option>
+                                    <option value="Rail Engineering">Rail Engineering</option>
+                                    <option value="Logistics">Logistics</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Cleaning">Cleaning & Facilities</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <!-- Manpower Type (New) -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="manpower_type">Manpower Preference</label>
+                                <select id="manpower_type" name="manpower_type" required>
+                                    <option value="" disabled selected>Local vs Foreign</option>
+                                    <option value="Local (Singaporean/PR)">Local (Singaporean/PR)</option>
+                                    <option value="Foreign (Work Permit/S-Pass)">Foreign (Work Permit/S-Pass)</option>
+                                    <option value="Mix / Unsure">Mix / Unsure</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 20px; flex-wrap: wrap;">
+                            <!-- Manpower Quantity -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="quantity">Headcount Needed</label>
+                                <select id="quantity" name="headcount">
+                                    <option value="1-5">1 - 5 Pax</option>
+                                    <option value="6-20">6 - 20 Pax</option>
+                                    <option value="21-50">21 - 50 Pax</option>
+                                    <option value="50+">50+ Pax</option>
+                                </select>
+                            </div>
+                            <!-- Duration (New) -->
+                            <div class="form-group" style="flex: 1; min-width: 250px;">
+                                <label for="duration">Project Duration</label>
+                                <input type="text" id="duration" name="duration" placeholder="e.g. 6 Months, 1 Year">
+                            </div>
+                        </div>
+
+                        <!-- Referral Source (New) -->
+                        <div class="form-group">
+                            <label for="source">Referral Source (Optional)</label>
+                            <select id="source" name="referral_source">
+                                <option value="" disabled selected>How did you hear about us?</option>
+                                <option value="Google Search">Google Search</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Internal Referral">Internal Referral / Sales Rep</option>
+                                <option value="Industry Event">Industry Event</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- Requirements -->
+                        <div class="form-group">
+                            <label for="requirements">Specific Requirements</label>
+                            <textarea id="requirements" name="requirements" rows="3"
+                                placeholder="Describe specific trades, certifications, or permits required..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Request
+                            Partnership</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Benefits Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-up">
+                <span class="section-subtitle">The RNS Advantage</span>
+                <h2>Why Partner With Us?</h2>
+            </div>
+
+            <div class="services-grid" style="margin-top: 30px;">
+                <!-- Benefit 1 -->
+                <div class="service-card fade-up">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3>Rapid Recruitment</h3>
+                    <p>Our active database allows us to shortlist and interview candidates within 48-72 hours.</p>
+                </div>
+                <!-- Benefit 2 -->
+                <div class="service-card fade-up" style="transition-delay: 0.1s;">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3>Full Compliance</h3>
+                    <p>We handle all MOM work pass transfers, medical screenings, and pre-employment checks.</p>
+                </div>
+                <!-- Benefit 3 -->
+                <div class="service-card fade-up" style="transition-delay: 0.2s;">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-timeline"></i>
+                    </div>
+                    <h3>Seamless Handover</h3>
+                    <p>We manage the entire transition until the candidate is successfully deployed to your company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Contact Section -->
+    <section class="section-padding bg-light" style="padding-top: 0; padding-bottom: 40px;">
+        <div class="container text-center fade-up">
+            <p style="font-size: 1.1rem; color: #555;">
+                Need an immediate consultation? <br>
+                <strong>Direct Contact (Business Dev):</strong> Suresh - <a href="tel:+6591234567"
+                    style="color: var(--primary-color); font-weight: 600;">+65 9123 4567</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">RNS <span class="highlight">Technology</span></a>
+                <p>Your trusted partner for enterprise manpower solutions in Singapore.</p>
+                <div class="mom-badge">
+                    <span>MOM Lic: 12C3456</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services-construction.html">Construction</a></li>
+                    <li><a href="services-rail.html">Rail Engineering</a></li>
+                    <li><a href="services-cleaning.html">Cleaning Services</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 RNS Technology Pte Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
