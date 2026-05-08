@@ -231,6 +231,10 @@ img {
     color: var(--primary-color);
 }
 
+.header:not(.scrolled):not(.light-header) .logo img {
+    filter: brightness(0) invert(1);
+}
+
 .highlight {
     color: var(--secondary-color);
 }
@@ -3643,4 +3647,99 @@ img {
 @keyframes scroll-marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
+}
+
+/* --- New Hero Style --- */
+.hero-new-style {
+    position: relative;
+}
+
+.hero-glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: var(--transition);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero-glass-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(104, 200, 116, 0.5);
+    box-shadow: 0 10px 40px 0 rgba(104, 200, 116, 0.2);
+}
+
+.hero-glass-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.hero-glass-card .card-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(104, 200, 116, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #68c874;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.hero-glass-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+.hero-glass-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-hero-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-align: center;
+    margin-top: auto;
+    width: max-content;
+}
+
+.btn-hero-outline:hover {
+    background: rgba(104, 200, 116, 0.2);
+    border-color: #68c874;
+    color: #68c874;
+}
+
+@media (max-width: 768px) {
+    .hero-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-glass-card {
+        width: 100%;
+        max-width: 400px;
+    }
 }
