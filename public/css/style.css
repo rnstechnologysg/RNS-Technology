@@ -3652,6 +3652,9 @@ img {
 /* --- New Hero Style --- */
 .hero-new-style {
     position: relative;
+    background-image: url('../RNSBackground.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-glass-card {
@@ -3734,12 +3737,172 @@ img {
 }
 
 @media (max-width: 768px) {
+    .hero-new-style {
+        background-image: url('../RNSMobileBackground.png');
+        padding-top: 80px !important;
+        padding-bottom: 20px !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        background-size: cover !important;
+        background-position: center bottom !important;
+        text-align: center; /* Centralize text */
+    }
+    
+    .hero-content {
+        margin-top: 0 !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center everything vertically */
+        align-items: center;
+        gap: 30px; /* Add space between text block and cards */
+    }
+
+    .hero-main-title {
+        font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
+        line-height: 1.2 !important;
+        letter-spacing: 0 !important;
+        margin-bottom: 12px !important;
+        text-align: center;
+    }
+    
+    .hero-main-desc {
+        font-size: 0.9rem !important;
+        margin-bottom: 0 !important;
+        line-height: 1.5 !important;
+        text-align: center;
+        max-width: 95%;
+    }
+    
     .hero-cards {
         flex-direction: column;
         align-items: center;
-    }
-    .hero-glass-card {
+        gap: 15px !important;
         width: 100%;
-        max-width: 400px;
+        margin-top: 0 !important;
+    }
+    
+    .hero-glass-card {
+        width: 92%;
+        max-width: 380px;
+        padding: 22px;
+        border-radius: 20px;
+        text-align: left;
+    }
+    
+    .hero-glass-card .card-icon {
+        display: flex !important; /* Show icon like desktop */
+    }
+    
+    .hero-glass-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+    
+    .hero-glass-card p {
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+    
+    .btn-hero-outline {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .btn-hero-outline span.arrow {
+        display: inline !important; /* Show arrow like desktop */
+    }
+
+    .desktop-br {
+        display: block; /* Restore breaks like desktop */
+    }
+}
+
+/* --- Preloader Style --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #061109; /* Dark green background like the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.loader-circle::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #2EBF66; /* Primary green */
+    border-right-color: #2EBF66; /* Half circle glow */
+    animation: spin 1.5s linear infinite;
+}
+
+.loader-logo {
+    width: 80px;
+    height: auto;
+    filter: brightness(0) invert(1); /* Make logo white as in mockup */
+}
+
+.loader-text {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .loader-circle {
+        width: 120px;
+        height: 120px;
+    }
+    .loader-logo {
+        width: 60px;
+    }
+    .loader-text {
+        font-size: 1rem;
     }
 }

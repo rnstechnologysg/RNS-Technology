@@ -40,6 +40,15 @@
 </head>
 
 <body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-circle">
+                <img src="assets/images/RNS_Logo.svg" alt="RNS Logo" class="loader-logo">
+            </div>
+            <p class="loader-text">Loading</p>
+        </div>
+    </div>
     <!-- SVG Filter for Liquid Glass Effect -->
     <svg style="width: 0; height: 0; position: absolute;">
         <filter id="displacementFilter">
@@ -73,13 +82,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-redesign hero-new-style" style="background-image: url('RNSBackground.png'); background-size: cover; background-position: center; padding-top: 130px; padding-bottom: 60px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; min-height: 100vh;">
+    <section id="home" class="hero-redesign hero-new-style" style="padding-top: 130px; padding-bottom: 60px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; min-height: 100vh;">
         <div class="container hero-content fade-up" style="max-width: 1000px; margin-top: -80px;">
-            <h1 style="color: white; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 15px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; line-height: 1.2;">
-                Specialized Manpower for <br>
-                <span style="color: #68c874;">Construction & Rail Engineering in<br>Singapore</span>
+            <h1 class="hero-main-title" style="color: white; font-weight: 700; font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 15px; font-family: 'Inter', sans-serif; letter-spacing: -0.5px; line-height: 1.2;">
+                Specialized Manpower for <br class="desktop-br">
+                <span style="color: #68c874;">Construction & Rail Engineering in <br class="desktop-br">Singapore</span>
             </h1>
-            <p style="color: white; font-size: 1.1rem; max-width: 800px; margin: 0 auto 50px; font-weight: 500; line-height: 1.6;">
+            <p class="hero-main-desc" style="color: white; font-size: 1.1rem; max-width: 800px; margin: 0 auto 50px; font-weight: 500; line-height: 1.6;">
                 MOM-Compliance Workforce Provider. Empowering Singapore's industries with skilled and general workers.
             </p>
 
@@ -90,10 +99,10 @@
                         <div class="card-icon">
                             <i class="fa-solid fa-users"></i>
                         </div>
-                        <h3>Need<br>Manpower?</h3>
+                        <h3>Need <br class="desktop-br">Manpower?</h3>
                     </div>
                     <p>Get a customized quote for your project requirements.</p>
-                    <a href="#contact" class="btn-hero-outline">START REQUEST &rarr;</a>
+                    <a href="#contact" class="btn-hero-outline">START REQUEST <span class="arrow">&rarr;</span></a>
                 </div>
 
                 <!-- Card 2 -->
@@ -105,7 +114,7 @@
                         <h3>Join Our Team</h3>
                     </div>
                     <p>Upload your CV and browse open positions.</p>
-                    <a href="#contact" class="btn-hero-outline">APPLY NOW &rarr;</a>
+                    <a href="#contact" class="btn-hero-outline">APPLY NOW <span class="arrow">&rarr;</span></a>
                 </div>
             </div>
         </div>
