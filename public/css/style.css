@@ -3739,30 +3739,34 @@ img {
 @media (max-width: 768px) {
     .hero-new-style {
         background-image: url('../RNSMobileBackground.png');
-        padding-top: 80px !important;
-        padding-bottom: 20px !important;
-        height: 100vh !important;
-        height: 100dvh !important;
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+        min-height: 100vh !important;
+        min-height: 100dvh !important;
         background-size: cover !important;
         background-position: center bottom !important;
-        text-align: center; /* Centralize text */
+        text-align: center;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
     }
     
     .hero-content {
         margin-top: 0 !important;
-        height: 100%;
+        height: auto !important;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center everything vertically */
+        justify-content: center;
         align-items: center;
-        gap: 30px; /* Add space between text block and cards */
+        gap: 15px; /* Reduced gap to save space */
+        width: 100%;
     }
 
     .hero-main-title {
-        font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
+        font-size: clamp(1.1rem, 5.5vw, 1.5rem) !important;
         line-height: 1.2 !important;
         letter-spacing: 0 !important;
-        margin-bottom: 12px !important;
+        margin-bottom: 10px !important;
         text-align: center;
     }
     
