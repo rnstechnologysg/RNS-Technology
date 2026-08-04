@@ -51,7 +51,14 @@ export function Hero() {
           alt="Hero Background"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center hidden md:block"
+        />
+        <Image
+          src="/images/her-sec-mob.webp"
+          alt="Hero Mobile Background"
+          fill
+          priority
+          className="object-cover object-center block md:hidden"
         />
       </div>
 

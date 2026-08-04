@@ -5,11 +5,16 @@ import { motion } from "framer-motion";
 export function ServicesHeroSection() {
   return (
     <section className="relative w-full overflow-hidden bg-slate-950">
-      {/* Background Image (In normal flow to dictate section height) */}
+      {/* Background Image (Desktop & Mobile responsive) */}
       <img 
         src="/images/services.webp" 
         alt="Services Background" 
-        className="w-full h-auto block"
+        className="w-full h-auto hidden md:block"
+      />
+      <img 
+        src="/images/services-mob.webp" 
+        alt="Services Mobile Background" 
+        className="w-full h-auto block md:hidden"
       />
       
       {/* Dark overlays */}

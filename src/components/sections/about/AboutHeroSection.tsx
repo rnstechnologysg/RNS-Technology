@@ -10,7 +10,12 @@ export function AboutHeroSection() {
         <img 
           src="/images/about-us.webp" 
           alt="RNS Technology Team" 
-          className="w-full h-full object-cover object-center"
+          className="w-full h-full object-cover object-center hidden md:block"
+        />
+        <img 
+          src="/images/about-us-mob.webp" 
+          alt="RNS Technology Team Mobile" 
+          className="w-full h-full object-cover object-center block md:hidden"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-slate-950/70 mix-blend-multiply" />
