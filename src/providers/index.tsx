@@ -7,6 +7,7 @@ import { ReactNode, useState } from "react";
 
 import { ContactModalProvider } from "@/context/ContactModalContext";
 import { ContactModal } from "@/components/modals/ContactModal";
+import { PageLoader } from "@/components/animations/PageLoader";
 
 export function AppProviders({ children }: { children: ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
@@ -22,6 +23,7 @@ export function AppProviders({ children }: { children: ReactNode }) {
       <QueryClientProvider client={queryClient}>
         <TooltipProvider delay={0}>
           <ContactModalProvider>
+            <PageLoader />
             {children}
             <ContactModal />
           </ContactModalProvider>
