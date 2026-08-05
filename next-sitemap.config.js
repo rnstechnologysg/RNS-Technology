@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://rns.com',
+  siteUrl: process.env.SITE_URL || 'https://rnstechnologysg.com',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   changefreq: 'daily',

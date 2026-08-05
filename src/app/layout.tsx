@@ -57,23 +57,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | RNS Enterprise",
-    default: "RNS | The Future of Enterprise Work",
+    template: "%s | RNS Technology Pte. Ltd.",
+    default: "RNS Technology Pte. Ltd. | Workforce & Engineering Solutions",
   },
-  description: "A world-class enterprise platform designed to scale with your business. Experience unmatched performance, security, and design.",
-  metadataBase: new URL(process.env.SITE_URL || 'https://rns.com'),
+  description: "RNS Technology Pte. Ltd. provides expert workforce solutions and engineering technical support across railway, construction, and infrastructure sectors in Singapore.",
+  metadataBase: new URL(process.env.SITE_URL || 'https://rnstechnologysg.com'),
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "/",
-    siteName: "RNS Enterprise",
-    title: "RNS | The Future of Enterprise Work",
-    description: "A world-class enterprise platform designed to scale with your business.",
+    locale: "en_SG",
+    url: "https://rnstechnologysg.com",
+    siteName: "RNS Technology Pte. Ltd.",
+    title: "RNS Technology Pte. Ltd. | Workforce & Engineering Solutions",
+    description: "Expert workforce solutions and engineering technical support across Singapore's railway, construction, and infrastructure sectors.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RNS | The Future of Enterprise Work",
-    description: "A world-class enterprise platform designed to scale with your business.",
+    title: "RNS Technology Pte. Ltd. | Workforce & Engineering Solutions",
+    description: "Expert workforce solutions and engineering technical support across Singapore's railway, construction, and infrastructure sectors.",
   },
 };
 
