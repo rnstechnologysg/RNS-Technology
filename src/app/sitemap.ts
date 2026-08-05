@@ -1,68 +1,58 @@
 import { MetadataRoute } from 'next';
 
+const BASE_URL = process.env.SITE_URL || 'https://rnstechnologysg.com';
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://rnstechnology.com.sg'; 
+  const now = new Date();
 
   return [
     {
-      url: `${baseUrl}`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
+      url: BASE_URL,
+      lastModified: now,
+      changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/about`,
+      lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/services`,
+      lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/projects`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/gallery`,
+      lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/gallery`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.8,
+      url: `${BASE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
     },
     {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/privacy`,
+      lastModified: now,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.4,
     },
     {
-      url: `${baseUrl}/terms`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/terms`,
+      lastModified: now,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.4,
     },
     {
-      url: `${baseUrl}/cookie-policy`,
-      lastModified: new Date(),
+      url: `${BASE_URL}/cookies`,
+      lastModified: now,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.3,
     },
   ];
 }
