@@ -77,6 +77,45 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "RNS Technology Pte. Ltd.",
+  legalName: "RNS Technology Pte. Ltd.",
+  url: "https://rnstechnologysg.com",
+  logo: "https://rnstechnologysg.com/icon.svg",
+  foundingLocation: {
+    "@type": "Place",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "SG",
+      addressLocality: "Singapore",
+    },
+  },
+  areaServed: "SG",
+  description:
+    "RNS Technology Pte. Ltd. provides expert workforce solutions and engineering technical support across railway, construction, and infrastructure sectors in Singapore.",
+  member: [
+    {
+      "@type": "OrganizationRole",
+      member: {
+        "@type": "Person",
+        name: "Dinesh",
+        jobTitle: "Chief Executive Officer",
+      },
+      roleName: "CEO",
+    },
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "info@rnstechnologysg.com",
+    areaServed: "SG",
+    availableLanguage: "English",
+  },
+  sameAs: ["https://www.rnstechnologysg.com"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -88,6 +127,12 @@ export default function RootLayout({
       className={`${sfProDisplay.variable} ${sfProRounded.variable} ${geistMono.variable} h-full antialiased suppressHydrationWarning overflow-x-hidden`}
       suppressHydrationWarning
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col overflow-x-hidden">
         <AppProviders>{children}</AppProviders>
       </body>
