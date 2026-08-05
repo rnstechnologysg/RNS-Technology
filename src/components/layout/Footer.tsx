@@ -36,7 +36,7 @@ export function Footer() {
             {/* Social Buttons */}
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/rns-technology-pvt-ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-slate-900 border border-slate-800 text-slate-300 text-xs font-medium hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all cursor-pointer"

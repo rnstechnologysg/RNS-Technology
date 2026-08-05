@@ -135,7 +135,8 @@ export default function RootLayout({
                 "name": "RNS Technology Pte. Ltd."
               },
               "sameAs": [
-                "https://rnstechnologysg.com"
+                "https://rnstechnologysg.com",
+                "https://www.linkedin.com/company/rns-technology-pvt-ltd/"
               ]
             })
           }}
